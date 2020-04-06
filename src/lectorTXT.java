@@ -24,7 +24,7 @@ public class lectorTXT {
 			
 			while((linea = breader.readLine()) != null) {
 
-				String[] separar = linea.split(" ");
+				String[] separar = linea.split("  ");
                 
                 for(int i = 0; i< separar.length; i++){
 

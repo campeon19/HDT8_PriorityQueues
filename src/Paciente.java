@@ -1,5 +1,5 @@
 
-public class Paciente implements pacienteInterface {
+public class Paciente implements Comparable<Paciente> {
 	
 	private String nombre;
 	private String descripcionSintoma;
@@ -26,9 +26,13 @@ public class Paciente implements pacienteInterface {
 	}
 
 	@Override
-	public int compareTo(String o) {
+	public int compareTo(Paciente emergencia) {
 		// TODO Auto-generated method stub
-		return 0;
+		return codigoEmergencia.compareTo(emergencia.getEmergencia());
+	}
+	
+	public String toString() {
+		return nombre + ", " + descripcionSintoma + ", " + codigoEmergencia;
 	}
 
 	

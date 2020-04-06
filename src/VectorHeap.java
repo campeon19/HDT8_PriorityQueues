@@ -1,7 +1,6 @@
-
 import java.util.*;
 
-public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
+public class VectorHeap<E extends Comparable<E>> implements PriorityQueueInterface<E>
 {
 
 	protected Vector<E> data; // the data, kept in heap order
@@ -115,24 +114,24 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 	@Override
 	public E getFirst() {
 		// TODO Auto-generated method stub
-		return null;
+		return data.get(0);
 	}
 
 	@Override
 	public boolean isEmpty() {
 		// TODO Auto-generated method stub
-		return false;
+		return data.size() == 0;
 	}
 
 	@Override
 	public int size() {
 		// TODO Auto-generated method stub
-		return 0;
+		return data.size();
 	}
 
 	@Override
 	public void clear() {
 		// TODO Auto-generated method stub
-		
+		data = new Vector<E>();
 	}
 }
